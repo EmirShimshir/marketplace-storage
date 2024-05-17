@@ -2,7 +2,7 @@ package storage
 
 import (
 	"context"
-	"github.com/EmirShimshir/marketplace-domain/domain"
+	"github.com/EmirShimshir/marketplace-core/domain"
 	minio2 "github.com/EmirShimshir/marketplace-storage/pkg/minio"
 	"github.com/minio/minio-go/v7"
 	"github.com/pkg/errors"

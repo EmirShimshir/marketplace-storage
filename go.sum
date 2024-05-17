@@ -4,8 +4,8 @@ github.com/AdaLogics/go-fuzz-headers v0.0.0-20230811130428-ced1acdcaa24 h1:bvDV9
 github.com/AdaLogics/go-fuzz-headers v0.0.0-20230811130428-ced1acdcaa24/go.mod h1:8o94RPi1/7XTJvwPpRSzSUedZrtlirdB3r9Z20bi2f8=
 github.com/Azure/go-ansiterm v0.0.0-20230124172434-306776ec8161 h1:L/gRVlceqvL25UVaW/CKtUDjefjrs0SPonmDGUVOYP0=
 github.com/Azure/go-ansiterm v0.0.0-20230124172434-306776ec8161/go.mod h1:xomTg63KZ2rFqZQzSB4Vz2SUXa1BpHTVz9L5PTmPC4E=
-github.com/EmirShimshir/marketplace-domain v0.0.0-20240517151020-6fd8bd582f8d h1:SKQAGP3S9zlHHSEzxVlyBz3qW/+3yKR3pRsBIVVeXY4=
-github.com/EmirShimshir/marketplace-domain v0.0.0-20240517151020-6fd8bd582f8d/go.mod h1:nl3lpdYzC1oNZRGEY96Nx3c5UT8e47LN7SNV3f5MTF4=
+github.com/EmirShimshir/marketplace-core v0.0.0-20240517195449-6971be551840 h1:UeToO6Q19PYgK35imsnXDwQpvmac7KNmcUo866JOm9Q=
+github.com/EmirShimshir/marketplace-core v0.0.0-20240517195449-6971be551840/go.mod h1:EpQUV3vtVf4YZ0fHTrlZNXVOc50qjgDTlwambljB0iE=
 github.com/Microsoft/go-winio v0.6.2 h1:F2VQgta7ecxGYO8k3ZZz3RS8fVIXVxONVUPlNERoyfY=
 github.com/Microsoft/go-winio v0.6.2/go.mod h1:yd8OoFMLzJbo9gZq8j5qaps8bJ9aShtEA8Ipt1oGCvU=
 github.com/Microsoft/hcsshim v0.12.3 h1:LS9NXqXhMoqNCplK1ApmVSfB4UnVLRDWRapB6EIlxE0=

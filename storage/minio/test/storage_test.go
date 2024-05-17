@@ -3,7 +3,7 @@ package storage
 import (
 	"bytes"
 	"context"
-	"github.com/EmirShimshir/marketplace-domain/domain"
+	"github.com/EmirShimshir/marketplace-core/domain"
 	storage "github.com/EmirShimshir/marketplace-storage/storage/minio"
 	"github.com/stretchr/testify/require"
 	"io"

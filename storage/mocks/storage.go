@@ -5,7 +5,7 @@ package mocks
 import (
 	context "context"
 
-	"github.com/EmirShimshir/marketplace-domain/domain"
+	"github.com/EmirShimshir/marketplace-core/domain"
 	mock "github.com/stretchr/testify/mock"
 )
 
