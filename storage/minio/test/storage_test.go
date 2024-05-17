@@ -33,7 +33,7 @@ func TestObjectStorage(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	minioConfig.Endpoint = url
+	minioConfig.Host = url
 
 	minioClient, err := newMinioClient(url)
 	if err != nil {
