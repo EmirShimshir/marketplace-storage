@@ -8,7 +8,6 @@
 #define IRQ_NUM 1
 
 MODULE_LICENSE("GPL");
-MODULE_AUTHOR("Lebedev Vladimir");
 
 char * upper_codes[84] =  { " ", "Esc", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "+", "Backspace", 
                       "Tab", "Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P", "[", "]", "Enter", "Ctrl",
@@ -35,7 +34,7 @@ struct tasklet_struct* interrupt_1;
 
 void my_tasklet_function(unsigned long data)
 {
-    printk( ">> interrupt_1: Bottom-half handled time=%llu\n", ktime_get());
+    printk( ">> interrupt_1: Bottom handled time=%llu\n", ktime_get());
     int code = interrupt_1->data;
     if (interrupt_1->data < 84)
     {
@@ -54,11 +53,13 @@ void my_tasklet_function(unsigned long data)
 
 irqreturn_t my_handler(int irq, void *dev)
 {
-    printk(">> interrupt_1: Top-half start time=%llu\n", ktime_get());
     int code;
     if (irq == IRQ_NUM)
     {
         code = inb(0x60);
+
+ if (code & 0x80 && (code & 0x7F) < 84) {
+  code &= 0x7F;
 
         if (code == 58)
         {
@@ -68,11 +69,11 @@ irqreturn_t my_handler(int irq, void *dev)
         interrupt_1->data = code;
         printk(">> interrupt_1: Key code is %d\n", code);
         tasklet_schedule(interrupt_1);
-    printk(">> interrupt_1: Bottom-half sheduled time=%llu\n", ktime_get());
+    printk(">> interrupt_1: Bottom sheduled time=%llu\n", ktime_get());
         return IRQ_HANDLED;
+ }
     }
-    printk(">> interrupt_1: irq wasn't handled\n");
-    return IRQ_NONE;
+    return IRQ_HANDLED;
 }
 
 static int __init my_init(void)
